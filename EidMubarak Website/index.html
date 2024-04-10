@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+	
+	<head>
+        <title>Minal Aidzin Wal Faidzin</title>
+        <meta charset="utf-8">
+
+        <link rel="icon" href="img/ketupat.gif" type="image/gif">
+        
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata:700' rel='stylesheet' type='text/css'>
+
+        <!-- ============ Title Text Animation ============  -->
+        <script type="text/javascript">
+        	function tb8_makeArray(n){
+        		this.length = n;
+        		return this.length;
+        	}
+
+        	tb8_messages = new
+        	tb8_rptType = 'infinite'
+        	tb8_rptNbr = 5;
+        	tb8_speed = 250;
+        	tb8_delay = 400;
+
+        	var tb8_counter = 1;
+        	var tb8_currMsg = 0;
+        	var tb8_tekst = "";
+        	var tb8_i = 0;
+        	var tb8_TID = null;
+
+        	function tb8_pisi(){
+        		tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1);
+        		document.title = tb8_tekst; tb8_sp=tb8_speed;
+        		tb8_i++
+        		if (tb8_i == tb8_messages[tb8_currMsg].length) { 
+        			tb8_currMsg++;
+        			tb8_i = 0;
+        			tb8_tekst = "";
+        			tb8_sp = tb8_delay;
+        		}
+        		if (tb8_currMsg == tb8_messages.length) {
+        			if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr)) {
+        				clearTimeout(tb8_TID);
+        				return;
+        			}
+        			tb8_counter++;
+        			tb8_currMsg = 0;
+        		}
+        		tb8_TID = setTimeout("tb8_pisi()", tb8_sp);
+        	}
+        	tb8_pisi()
+        </script>
+        <!-- ============ End Title Text Animation ============  -->
+
+        <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/typewriter.js"></script>
+        <script src="js/animate.js"></script>
+
+	</head>
+<body>
+	
+	<div class="board">
+	   <p id="terminal"></p>
+	</div> 
+	<script>
+		$(function () {
+		    var typewriter = new Typewriter($("#terminal"));
+		    typewriter.setCaret("_");
+		    typewriter.setCaretPeriod(500);
+		    typewriter.setDelay(150, 50);
+		    animate(typewriter);
+		});
+	</script>
+	<!-- ============ End Function ============  -->
+</body>
+<footer>
+	<div class="footer">
+		<p>© 2024 <a href="https://">EID MUBARAK! </a> | From HASSAN YASEEN😊<a href="
+</footer>
+</html>
